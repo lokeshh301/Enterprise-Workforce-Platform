@@ -59,46 +59,15 @@ This project started as a simple Spring Boot CRUD backend to manage employee rec
 │   └── package.json
 └── README.md
 
-Getting Started
-Prerequisites
-JDK 17 or higher installed
+## Getting Started
 
-Node.js (v18+) and npm
+## Prerequisites
 
-MySQL running locally
+1) JDK 17 or higher installed
 
-Step 1: Database Setup
-Log into your local MySQL instance and create the database:
+2) Node.js (v18+) and npm
 
-SQL
-CREATE DATABASE employee_db;
-Update your database credentials in backend/src/main/resources/application.properties if they differ:
-
-Properties
-spring.datasource.url=jdbc:mysql://localhost:3306/employee_db?createDatabaseIfNotExist=true&useSSL=false&serverTimezone=UTC
-spring.datasource.username=root
-spring.datasource.password=YOUR_PASSWORD
-server.port=8081
-Step 2: Run the Spring Boot Backend
-From the backend folder:
-
-Bash
-# Build the project
-mvn clean install
-
-# Run the app
-mvn spring-boot:run
-The backend starts at http://localhost:8081.
-
-To run the unit and controller tests:
-
-Bash
-mvn test
-Step 3: Run the React Frontend
-Open a new terminal, navigate to the frontend folder:
-
-Bash
-cd frontend
+3) MySQL running locally
 
 # Install dependencies
 npm install
@@ -107,8 +76,10 @@ npm install
 npm run dev
 Open http://localhost:5173 in your browser.
 
-API Summary
-Employees (/api/v1/employees)
+## API Summary
+
+Employees (/api/v1/employees
+
 POST /api/v1/employees - Register a new employee (validates email, code, salary)
 
 GET /api/v1/employees?page=0&size=10 - Get paginated employee list
@@ -119,21 +90,24 @@ PUT /api/v1/employees/{id} - Update employee details
 
 DELETE /api/v1/employees/{id} - Remove an employee
 
-Attendance (/api/v1/attendance)
+## Attendance (/api/v1/attendance)
+
 POST /api/v1/attendance/clock-in - Record today's clock-in
 
 POST /api/v1/attendance/clock-out/{employeeId} - Clock out and calculate worked hours
 
 GET /api/v1/attendance/employee/{employeeId} - View employee attendance logs
 
-Service Tickets (/api/v1/tickets)
+## Service Tickets (/api/v1/tickets)
+
 POST /api/v1/tickets - Create an IT/service ticket (OPEN by default)
 
 PATCH /api/v1/tickets/{id}/status - Move status (OPEN -> IN_PROGRESS -> RESOLVED)
 
 GET /api/v1/tickets?status=OPEN - Filter tickets by current status
 
-How I Tested It
+##  How I Tested It
+
 Backend Unit & Slice Tests: Wrote tests using Mockito and @WebMvcTest to verify that invalid inputs return 400 Bad Request and that tickets cannot jump states without resolving notes.
 
 Postman Automation: Set up a sequential Postman collection using collection variables so the ID generated in POST /employees automatically feeds into the attendance and ticketing requests.
