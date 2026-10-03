@@ -1,5 +1,15 @@
 # Enterprise Workforce Platform
 
+# Application UI 
+
+<img width="1342" height="635" alt="Screenshot 2026-10-03 204848" src="https://github.com/user-attachments/assets/4ff47d15-2910-4d6b-ab33-a0d3ff3829b1" />
+
+<img width="1336" height="598" alt="Screenshot 2026-10-03 204901" src="https://github.com/user-attachments/assets/3893de72-7dfb-47aa-8ae0-25e6fb956c53" />
+
+<img width="1299" height="356" alt="Screenshot 2026-10-03 204911" src="https://github.com/user-attachments/assets/d5a76104-c2cf-4041-952d-493dcc0203f4" />
+
+
+
 A full-stack internal management system built to handle employee profiles, daily attendance logs, and internal IT service requests.
 
 This project started as a simple Spring Boot CRUD backend to manage employee records[cite: 1, 2, 3, 4, 5, 6]. I later refactored and expanded it into a multi-module system to replicate how production systems handle data validation, relational integrity, state machines, and API contracts.
